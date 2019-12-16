@@ -17,19 +17,19 @@ std::string Biology::DeoxyribonucleicAcid::verify(std::string &dna_strand) {
     std::transform(dna_strand.begin(), dna_strand.end(), dna_strand.begin(), &::toupper);
     for(unsigned int i = 0; i < dna_strand.length()-1; i += 2) {
             if(dna_strand.at(i) == 'A') {
-                if(dna_strand.at(i+1) != 'T') { throw std::invalid_argument("Invalid DNA stand"); }
+                if(dna_strand.at(i+1) != 'T') { throw std::invalid_argument("Invalid DNA strand"); }
             }
             else if(dna_strand.at(i) == 'T') {
-                if(dna_strand.at(i+1) != 'A') { throw std::invalid_argument("Invalid DNA stand"); }
+                if(dna_strand.at(i+1) != 'A') { throw std::invalid_argument("Invalid DNA strand"); }
             }
             else if(dna_strand.at(i) == 'C') {
-                if(dna_strand.at(i+1) != 'G') { throw std::invalid_argument("Invalid DNA stand"); }
+                if(dna_strand.at(i+1) != 'G') { throw std::invalid_argument("Invalid DNA strand"); }
             }
             else if(dna_strand.at(i) == 'G') {
-                if(dna_strand.at(i+1) != 'C') { throw std::invalid_argument("Invalid DNA stand"); }
+                if(dna_strand.at(i+1) != 'C') { throw std::invalid_argument("Invalid DNA strand"); }
             }
             else {
-               throw std::invalid_argument("Invalid DNA stand");
+               throw std::invalid_argument("Invalid DNA strand");
             }
     }
     return dna_strand;
