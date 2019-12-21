@@ -1,14 +1,13 @@
 #ifndef DEOXYRIBONUCLEICACID_H
 #define DEOXYRIBONUCLEICACID_H
 
-
 #include <string>
+
 namespace Biology {
     class DeoxyribonucleicAcid
     {
         public:
             DeoxyribonucleicAcid(std::string &dna_strand);
-
             DeoxyribonucleicAcid replicate();
 
             float length() const;
@@ -17,8 +16,9 @@ namespace Biology {
             friend std::ostream &operator<<(std::ostream& os, const DeoxyribonucleicAcid &dna);
         private:
             static std::string verify(std::string &dna_strand);
-            std::string dna_strand_;
             float calculate_length(std::string &dna_strand) const;
+
+            std::string dna_strand_;
             float length_;
 
     };

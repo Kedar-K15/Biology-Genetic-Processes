@@ -34,6 +34,7 @@ std::string Biology::DeoxyribonucleicAcid::verify(std::string &dna_strand) {
     }
     return dna_strand;
 }
+
 Biology::DeoxyribonucleicAcid Biology::DeoxyribonucleicAcid::replicate() {
     return DeoxyribonucleicAcid(dna_strand_);
 }
@@ -53,6 +54,7 @@ std::string Biology::DeoxyribonucleicAcid::dna_strand() const {
 bool Biology::DeoxyribonucleicAcid::compare_strands(const DeoxyribonucleicAcid &dna1, const DeoxyribonucleicAcid &dna2) {
     return dna1.dna_strand() == dna2.dna_strand();
 }
+
 namespace Biology {
     std::ostream &operator<<(std::ostream& os, const DeoxyribonucleicAcid &dna) {
         os << "[DNA Strand: " << dna.dna_strand_ << ", "
